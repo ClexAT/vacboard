@@ -42,7 +42,7 @@ end
 
 
 % real addition
-sums = cumsum(table2array(deldata(:,2)));
+%sums = cumsum(table2array(deldata(:,2)));
 % fancy Matlab stuff
 sums = cumtrapz(table2array(deldata(:,2)));
 dates = table2array(deldata(:,1));
