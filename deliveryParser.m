@@ -9,11 +9,11 @@ deliveries = readtable("vacdel.csv");
 comirnaty = 1;
 moderna = 2;
 astra = 3;
-jensen = 4;
+johnson = 4;
 
 % matrix to store data points = deliveryhistory
 % 1 = date, 2 = vac, 3 = count (overall germany)
-deliveries(1,:) = [];
+%deliveries(1,:) = [];
 dates = table2array(deliveries(:,1));
 vacs = table2array(deliveries(:,2));
 count = table2array(deliveries(:,4));

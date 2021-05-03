@@ -11,6 +11,8 @@ tnow.Second = 0;
 tnow.Minute = 0;
 %%
 
+x = sortrows(x,{'current_date','current_vac','Var3'},'ascend');
+
 range = t1:tnow;
 deldata = table();
 vacdelindx = 1;
@@ -39,7 +41,9 @@ for t = range
 end
 
 
-
+% real addition
+sums = cumsum(table2array(deldata(:,2)));
+% fancy Matlab stuff
 sums = cumtrapz(table2array(deldata(:,2)));
 dates = table2array(deldata(:,1));
 
